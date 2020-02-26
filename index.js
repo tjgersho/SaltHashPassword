@@ -16,14 +16,14 @@ function getSaltedHash(pswd, saltFactor){
     return  cryptojs.SHA256(saltedPassword).toString();
 };
 
-saltHashPswd.Sha256HashPassword(passwd){
+saltHashPswd.Sha256HashPassword = function(passwd){
    //gen hash password.
    var hash = getSaltedHash(passwd, SALT_WORK_FACTOR);
    return hash;
 }
 
 
-saltHashPswd.IsPasswordMatch(passwd, actualPwdHash){
+saltHashPswd.IsPasswordMatch = function(passwd, actualPwdHash){
    for(var i=0; i<= SALT_WORK_FACTOR; i++){
       //Compare  getSaltedHash..
       var testHash = getSaltedHash(passwd, SALT_WORK_FACTOR);

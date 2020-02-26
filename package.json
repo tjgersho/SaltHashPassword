@@ -1,0 +1,28 @@
+{
+  "name": "salthashpassword",
+  "version": "1.0.0",
+  "description": "Functions to salt and hash passwords.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tjgersho/SaltHashPassword.git"
+  },
+  "keywords": [
+    "Salt",
+    "Hash",
+    "Password",
+    "SHA256"
+  ],
+  "author": "tjgersho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tjgersho/SaltHashPassword/issues"
+  },
+  "homepage": "https://github.com/tjgersho/SaltHashPassword#readme",
+  "dependencies": {
+    "crypto-js": "^4.0.0"
+  }
+}

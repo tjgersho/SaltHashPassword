@@ -1,6 +1,6 @@
 {
   "name": "salthashpassword",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Functions to salt and hash passwords.",
   "main": "index.js",
   "scripts": {

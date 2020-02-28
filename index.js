@@ -22,11 +22,16 @@ saltHashPswd.Sha256HashPassword = function(passwd){
    return hash;
 }
 
+function getSpecificSaltedHash(pswd, saltNumber){
+  var saltedPassword = pswd  +  saltNumber.toString();
+  return  cryptojs.SHA256(saltedPassword).toString();
+}
 
 saltHashPswd.IsPasswordMatch = function(passwd, actualPwdHash){
    for(var i=0; i<= SALT_WORK_FACTOR; i++){
       //Compare  getSaltedHash..
-      var testHash = getSaltedHash(passwd, SALT_WORK_FACTOR);
+      var testHash = getSpecificSaltedHash(passwd, i);
+
       if(testHash === actualPwdHash){
         return true;
       }
